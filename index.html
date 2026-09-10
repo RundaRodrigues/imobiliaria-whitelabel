@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Imobiliaria — modelo white label</title>
-<meta name="description" content="Modelo de site white label para imobiliarias boutique.">
+<title>Imobiliária — modelo white label</title>
+<meta name="description" content="Modelo de site white label para imobiliárias boutique.">
 <meta name="theme-color" content="#17150f">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Pular para o conteudo</a>
+<a class="skip-link" href="#main" data-b="ui.pularConteudo">Pular para o conteúdo</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
@@ -37,16 +37,16 @@
       <span class="logo-mark" data-b="sigla" translate="no">TR</span>
       <span data-b="nome" translate="no">Terrano Imoveis</span>
     </a>
-    <nav class="nav" id="nav-menu" data-nav-menu aria-label="Navegacao principal">
-      <a href="#imoveis">Imoveis</a>
-      <a href="#bairros">Bairros</a>
-      <a href="#diferenciais">Como trabalhamos</a>
-      <a href="#equipe">Time</a>
-      <a href="#avaliacao">Avaliacao</a>
-      <a class="btn btn-primary" href="#avaliacao">Avaliar meu imovel</a>
+    <nav class="nav" id="nav-menu" data-nav-menu aria-label="Navegação principal">
+      <a href="#imoveis" data-b="nav.imoveis">Imóveis</a>
+      <a href="#bairros" data-b="nav.bairros">Bairros</a>
+      <a href="#diferenciais" data-b="nav.diferenciais">Como trabalhamos</a>
+      <a href="#equipe" data-b="nav.equipe">Time</a>
+      <a href="#avaliacao" data-b="nav.avaliacao">Avaliação</a>
+      <a class="btn btn-primary" href="#avaliacao" data-b="nav.cta">Avaliar meu imóvel</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-ghost" href="#avaliacao">Avaliar meu imovel</a>
+      <a class="btn btn-ghost" href="#avaliacao" data-b="nav.cta">Avaliar meu imóvel</a>
       <button class="nav-toggle" data-nav-toggle aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menu">
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -63,17 +63,17 @@
     <h1 data-bhtml="hero.tituloHtml"></h1>
     <p class="lead" data-b="hero.subtitulo"></p>
 
-    <form class="searchbar" data-form novalidate>
+    <form class="searchbar" data-form data-form-title="busca.tituloMensagem" novalidate>
       <div class="field">
-        <label for="s-tipo">Tipo</label>
+        <label for="s-tipo" data-b="busca.labelTipo"></label>
         <select id="s-tipo" name="Tipo" autocomplete="off" data-list-options="busca.tipos"></select>
       </div>
       <div class="field">
-        <label for="s-bairro">Bairro</label>
+        <label for="s-bairro" data-b="busca.labelBairro"></label>
         <select id="s-bairro" name="Bairro" autocomplete="off" data-list-options="busca.bairros"></select>
       </div>
       <div class="field">
-        <label for="s-faixa">Faixa de preco</label>
+        <label for="s-faixa" data-b="busca.labelFaixa"></label>
         <select id="s-faixa" name="Faixa" autocomplete="off" data-list-options="busca.faixas"></select>
       </div>
       <button class="btn btn-primary" type="submit" data-b="busca.cta">Buscar</button>
@@ -224,19 +224,19 @@
       <div class="contact-list">
         <a class="contact-item" data-battr="href:_links.whatsapp" target="_blank" rel="noopener">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg></span>
-          <span><span class="k">WhatsApp</span><span class="v" data-b="contato.whatsappLabel"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.whatsapp"></span><span class="v" data-b="contato.whatsappLabel"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.telefone">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></span>
-          <span><span class="k">Telefone</span><span class="v" data-b="contato.telefoneLabel"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.telefone"></span><span class="v" data-b="contato.telefoneLabel"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.mapa" target="_blank" rel="noopener">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg></span>
-          <span><span class="k">Endereco</span><span class="v" data-b="contato.endereco"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.endereco"></span><span class="v" data-b="contato.endereco"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.email">
           <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
-          <span><span class="k">E-mail</span><span class="v" data-b="contato.email"></span></span>
+          <span><span class="k" data-b="contatoSecao.chaves.email"></span><span class="v" data-b="contato.email"></span></span>
         </a>
       </div>
     </div>
@@ -244,25 +244,25 @@
     <form class="card contact-form" data-form data-reveal data-delay="1" novalidate>
       <div class="form-rows">
         <div class="row-2">
-          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="Nome" autocomplete="name" spellcheck="false" type="text" placeholder="Ex.: Maria Silva…" required></div>
-          <div class="field"><label for="f-tel">WhatsApp</label><input id="f-tel" name="WhatsApp" autocomplete="tel" inputmode="tel" spellcheck="false" type="tel" placeholder="Ex.: (51) 99999-0000" required></div>
+          <div class="field"><label for="f-nome" data-b="contatoSecao.form.nome"></label><input id="f-nome" name="Nome" autocomplete="name" spellcheck="false" type="text" data-battr="placeholder:contatoSecao.form.nomeHint" required></div>
+          <div class="field"><label for="f-tel" data-b="contatoSecao.form.whats"></label><input id="f-tel" name="WhatsApp" autocomplete="tel" inputmode="tel" spellcheck="false" type="tel" data-battr="placeholder:contatoSecao.form.whatsHint" required></div>
         </div>
         <div class="row-2">
-          <div class="field"><label for="f-tipo">Tipo de imovel</label>
-            <select id="f-tipo" name="Tipo" autocomplete="off"><option>Apartamento</option><option>Casa</option><option>Cobertura</option><option>Terreno</option><option>Sala comercial</option></select>
+          <div class="field"><label for="f-tipo" data-b="contatoSecao.form.tipo"></label>
+            <select id="f-tipo" name="Tipo" autocomplete="off" data-list-options="busca.tipos"></select>
           </div>
-          <div class="field"><label for="f-bairro">Bairro</label><input id="f-bairro" name="Bairro" autocomplete="address-level3" type="text" placeholder="Ex.: Moinhos de Vento…"></div>
+          <div class="field"><label for="f-bairro" data-b="contatoSecao.form.bairro"></label><input id="f-bairro" name="Bairro" autocomplete="address-level3" type="text" data-battr="placeholder:contatoSecao.form.bairroHint"></div>
         </div>
         <div class="row-2">
-          <div class="field"><label for="f-area">Area privativa</label><input id="f-area" name="Area" autocomplete="off" inputmode="decimal" type="text" placeholder="Ex.: 96 m²"></div>
-          <div class="field"><label for="f-quartos">Quartos</label>
-            <select id="f-quartos" name="Quartos" autocomplete="off"><option>1</option><option>2</option><option>3</option><option>4 ou mais</option></select>
+          <div class="field"><label for="f-area" data-b="contatoSecao.form.area"></label><input id="f-area" name="Area" autocomplete="off" inputmode="decimal" type="text" data-battr="placeholder:contatoSecao.form.areaHint"></div>
+          <div class="field"><label for="f-quartos" data-b="contatoSecao.form.quartos"></label>
+            <select id="f-quartos" name="Quartos" autocomplete="off" data-list-options="contatoSecao.form.opcoesQuartos"></select>
           </div>
         </div>
-        <div class="field"><label for="f-msg">Algo que devemos saber?</label><textarea id="f-msg" name="Mensagem" autocomplete="off" placeholder="Ex.: reformado em 2024, quero vender ate marco…"></textarea></div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Solicitar avaliacao gratuita</button>
+        <div class="field"><label for="f-msg" data-b="contatoSecao.form.mensagem"></label><textarea id="f-msg" name="Mensagem" autocomplete="off" data-battr="placeholder:contatoSecao.form.mensagemHint"></textarea></div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" data-b="contatoSecao.form.enviar"></button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        <p class="form-note">Abrimos o WhatsApp com sua solicitacao pronta. Nenhum dado fica salvo no site.</p>
+        <p class="form-note" data-b="contatoSecao.form.nota"></p>
       </div>
     </form>
   </div>
@@ -278,21 +278,21 @@
         <p style="margin-top:16px;max-width:38ch;opacity:.7;font-size:15px" data-b="rodape.sobre"></p>
         <p style="margin-top:12px;opacity:.5;font-size:13px" data-b="contato.creci"></p>
       </div>
-      <div><h4>Imoveis</h4><div class="footer-links">
-        <a href="#imoveis">Portfolio</a><a href="#bairros">Bairros</a><a href="#avaliacao">Avaliar meu imovel</a><a href="#faq">Duvidas</a>
+      <div><h4 data-b="rodape.colImoveis"></h4><div class="footer-links">
+        <a href="#imoveis" data-b="rodape.linkPortfolio"></a><a href="#bairros" data-b="nav.bairros">Bairros</a><a href="#avaliacao" data-b="rodape.linkAvaliar"></a><a href="#faq" data-b="faq.eyebrow"></a>
       </div></div>
-      <div><h4>Contato</h4><div class="footer-links">
+      <div><h4 data-b="rodape.colContato"></h4><div class="footer-links">
         <a data-battr="href:_links.whatsapp" target="_blank" rel="noopener" data-b="contato.whatsappLabel"></a>
         <a data-battr="href:_links.telefone" data-b="contato.telefoneLabel"></a>
         <a data-battr="href:_links.email" data-b="contato.email"></a>
       </div></div>
-      <div><h4>Escritorio</h4>
+      <div><h4 data-b="rodape.colEscritorio"></h4>
         <div class="footer-links"><a data-battr="href:_links.mapa" target="_blank" rel="noopener" data-b="contato.endereco"></a></div>
         <div class="footer-links" style="margin-top:16px" data-list="redes"><template><a href="{{url}}" target="_blank" rel="noopener">{{nome}}</a></template></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span data-year></span> <span data-b="nome" translate="no"></span>. Todos os direitos reservados.</span>
+      <span>&copy; <span data-year></span> <span data-b="nome" translate="no"></span>. <span data-b="rodape.direitos"></span></span>
       <span data-b="rodape.aviso"></span>
     </div>
   </div>
