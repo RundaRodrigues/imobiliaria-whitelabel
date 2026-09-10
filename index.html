@@ -34,10 +34,10 @@
 <header class="header" data-header>
   <div class="wrap">
     <a class="logo" href="#top">
-      <span class="logo-mark" data-b="sigla">TR</span>
-      <span data-b="nome">Terrano Imoveis</span>
+      <span class="logo-mark" data-b="sigla" translate="no">TR</span>
+      <span data-b="nome" translate="no">Terrano Imoveis</span>
     </a>
-    <nav class="nav" data-nav-menu aria-label="Navegacao principal">
+    <nav class="nav" id="nav-menu" data-nav-menu aria-label="Navegacao principal">
       <a href="#imoveis">Imoveis</a>
       <a href="#bairros">Bairros</a>
       <a href="#diferenciais">Como trabalhamos</a>
@@ -47,8 +47,8 @@
     </nav>
     <div class="header-cta">
       <a class="btn btn-ghost" href="#avaliacao">Avaliar meu imovel</a>
-      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Abrir menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button class="nav-toggle" data-nav-toggle aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
@@ -66,15 +66,15 @@
     <form class="searchbar" data-form novalidate>
       <div class="field">
         <label for="s-tipo">Tipo</label>
-        <select id="s-tipo" name="Tipo" data-list-options="busca.tipos"></select>
+        <select id="s-tipo" name="Tipo" autocomplete="off" data-list-options="busca.tipos"></select>
       </div>
       <div class="field">
         <label for="s-bairro">Bairro</label>
-        <select id="s-bairro" name="Bairro" data-list-options="busca.bairros"></select>
+        <select id="s-bairro" name="Bairro" autocomplete="off" data-list-options="busca.bairros"></select>
       </div>
       <div class="field">
         <label for="s-faixa">Faixa de preco</label>
-        <select id="s-faixa" name="Faixa" data-list-options="busca.faixas"></select>
+        <select id="s-faixa" name="Faixa" autocomplete="off" data-list-options="busca.faixas"></select>
       </div>
       <button class="btn btn-primary" type="submit" data-b="busca.cta">Buscar</button>
     </form>
@@ -104,9 +104,9 @@
             <h3>{{titulo}}</h3>
             <p class="prop-price">{{preco}} <small>{{condominio}}</small></p>
             <ul class="prop-specs">
-              <li><svg viewBox="0 0 24 24"><use href="#i-area"/></svg>{{area}}</li>
-              <li><svg viewBox="0 0 24 24"><use href="#i-bed"/></svg>{{quartos}}</li>
-              <li><svg viewBox="0 0 24 24"><use href="#i-car"/></svg>{{vagas}}</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-area"/></svg>{{area}}</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-bed"/></svg>{{quartos}}</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-car"/></svg>{{vagas}}</li>
             </ul>
           </div>
         </article>
@@ -223,19 +223,19 @@
       <p class="lead measure" data-b="contatoSecao.subtitulo"></p>
       <div class="contact-list">
         <a class="contact-item" data-battr="href:_links.whatsapp" target="_blank" rel="noopener">
-          <span class="icon-badge"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span>
+          <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg></span>
           <span><span class="k">WhatsApp</span><span class="v" data-b="contato.whatsappLabel"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.telefone">
-          <span class="icon-badge"><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg></span>
+          <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg></span>
           <span><span class="k">Telefone</span><span class="v" data-b="contato.telefoneLabel"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.mapa" target="_blank" rel="noopener">
-          <span class="icon-badge"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></span>
+          <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg></span>
           <span><span class="k">Endereco</span><span class="v" data-b="contato.endereco"></span></span>
         </a>
         <a class="contact-item" data-battr="href:_links.email">
-          <span class="icon-badge"><svg viewBox="0 0 24 24"><use href="#i-mail"/></svg></span>
+          <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
           <span><span class="k">E-mail</span><span class="v" data-b="contato.email"></span></span>
         </a>
       </div>
@@ -244,22 +244,22 @@
     <form class="card contact-form" data-form data-reveal data-delay="1" novalidate>
       <div class="form-rows">
         <div class="row-2">
-          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="Nome" type="text" placeholder="Seu nome" required></div>
-          <div class="field"><label for="f-tel">WhatsApp</label><input id="f-tel" name="WhatsApp" type="tel" placeholder="(00) 00000-0000" required></div>
+          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="Nome" autocomplete="name" spellcheck="false" type="text" placeholder="Ex.: Maria Silva…" required></div>
+          <div class="field"><label for="f-tel">WhatsApp</label><input id="f-tel" name="WhatsApp" autocomplete="tel" inputmode="tel" spellcheck="false" type="tel" placeholder="Ex.: (51) 99999-0000" required></div>
         </div>
         <div class="row-2">
           <div class="field"><label for="f-tipo">Tipo de imovel</label>
-            <select id="f-tipo" name="Tipo"><option>Apartamento</option><option>Casa</option><option>Cobertura</option><option>Terreno</option><option>Sala comercial</option></select>
+            <select id="f-tipo" name="Tipo" autocomplete="off"><option>Apartamento</option><option>Casa</option><option>Cobertura</option><option>Terreno</option><option>Sala comercial</option></select>
           </div>
-          <div class="field"><label for="f-bairro">Bairro</label><input id="f-bairro" name="Bairro" type="text" placeholder="Ex.: Moinhos de Vento"></div>
+          <div class="field"><label for="f-bairro">Bairro</label><input id="f-bairro" name="Bairro" autocomplete="address-level3" type="text" placeholder="Ex.: Moinhos de Vento…"></div>
         </div>
         <div class="row-2">
-          <div class="field"><label for="f-area">Area privativa</label><input id="f-area" name="Area" type="text" placeholder="Ex.: 96 m²"></div>
+          <div class="field"><label for="f-area">Area privativa</label><input id="f-area" name="Area" autocomplete="off" inputmode="decimal" type="text" placeholder="Ex.: 96 m²"></div>
           <div class="field"><label for="f-quartos">Quartos</label>
-            <select id="f-quartos" name="Quartos"><option>1</option><option>2</option><option>3</option><option>4 ou mais</option></select>
+            <select id="f-quartos" name="Quartos" autocomplete="off"><option>1</option><option>2</option><option>3</option><option>4 ou mais</option></select>
           </div>
         </div>
-        <div class="field"><label for="f-msg">Algo que devemos saber?</label><textarea id="f-msg" name="Mensagem" placeholder="Reformas, pendencias, prazo desejado para vender..."></textarea></div>
+        <div class="field"><label for="f-msg">Algo que devemos saber?</label><textarea id="f-msg" name="Mensagem" autocomplete="off" placeholder="Ex.: reformado em 2024, quero vender ate marco…"></textarea></div>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Solicitar avaliacao gratuita</button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         <p class="form-note">Abrimos o WhatsApp com sua solicitacao pronta. Nenhum dado fica salvo no site.</p>
@@ -274,7 +274,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <span class="logo" style="color:var(--footer-fg)"><span class="logo-mark" data-b="sigla"></span><span data-b="nome"></span></span>
+        <span class="logo" style="color:var(--footer-fg)"><span class="logo-mark" data-b="sigla" translate="no"></span><span data-b="nome" translate="no"></span></span>
         <p style="margin-top:16px;max-width:38ch;opacity:.7;font-size:15px" data-b="rodape.sobre"></p>
         <p style="margin-top:12px;opacity:.5;font-size:13px" data-b="contato.creci"></p>
       </div>
@@ -292,14 +292,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span data-year></span> <span data-b="nome"></span>. Todos os direitos reservados.</span>
+      <span>&copy; <span data-year></span> <span data-b="nome" translate="no"></span>. Todos os direitos reservados.</span>
       <span data-b="rodape.aviso"></span>
     </div>
   </div>
 </footer>
 
 <a class="wa-float" data-battr="href:_links.whatsapp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
 </a>
 
 <script src="js/brand.js"></script>
